@@ -1,20 +1,8 @@
 function isPalindrome(word) {
   // Write your algorithm here
-  const splitWord = word.split("")
-  let invertWord = []
-  let newWord = ""
-  splitWord.forEach((element) => {
-    invertWord.unshift(element)
-  })
-  invertWord.forEach((element) => {
-    newWord = newWord + element
-  })
-  if (newWord === word) {
-    return true;
-  }
-  else {
-    return false;
-  }
+  const newWord = word.split("").reverse().join("")
+  
+  return newWord === word
 }
 
 /* 

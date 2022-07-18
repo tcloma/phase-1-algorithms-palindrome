@@ -1,9 +1,29 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  const splitWord = word.split("")
+  let invertWord = []
+  let newWord = ""
+  splitWord.forEach((element) => {
+    invertWord.unshift(element)
+  })
+  invertWord.forEach((element) => {
+    newWord = newWord + element
+  })
+  if (newWord === word) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 /* 
   Add your pseudocode here
+  Take a string and seperate each character
+  Add each character into an array, placing each element at the start
+  Itirate over each element of the array
+    Combine them into a string
+    Check if the outputed string is the same as the inputed string
 */
 
 /*
